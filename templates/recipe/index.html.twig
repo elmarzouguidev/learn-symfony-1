@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Tous les recettes" %}
+{% block body %}
+    <ul>
+      {% for recipe in recipes %}
+        <li>
+          <a class="" aria-current="page" href="{{ url('recipe.show', { slug: recipe.slug, id: recipe.id }) }}">{{recipe.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+{% endblock %}
